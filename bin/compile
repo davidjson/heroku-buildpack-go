@@ -1,6 +1,8 @@
 #!/bin/bash
 # usage: bin/compile <build-dir> <cache-dir> <env-dir>
 
+SERVICE_NAME=$(cat "${ENV_DIR}/SERVICE_NAME")
+
 if [[ -z "${SERVICE_NAME}" ]]; then
     echo "SERVICE_NAME was not set. Aborting"
     exit 1
