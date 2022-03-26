@@ -1,6 +1,11 @@
 #!/bin/bash
 # usage: bin/compile <build-dir> <cache-dir> <env-dir>
 
+if [[ -z "${SERVICE_NAME}" ]]; then
+    echo "SERVICE_NAME was not set. Aborting" | indent
+    exit 1
+fi
+
 set -eo pipefail
 
 [ "$BUILDPACK_XTRACE" ] && set -o xtrace
@@ -448,7 +453,7 @@ setupProcfile() {
     info ""
     info "Created a Procfile with the following entries:"
     if [ ${#pf[@]} -eq 1 ]; then
-        local line="web: bin/$(echo ${pf[0]} | cut -d / -f 2)"
+        local line="web: bin/$(echo ${SERVICE_NAME} | cut -d / -f 2)"
         echo "${line}" > ${build}/Procfile
         info "\t\t${line}"
     elif [ ${#pf[@]} -gt 1 ]; then
