@@ -2,7 +2,7 @@
 # usage: bin/compile <build-dir> <cache-dir> <env-dir>
 
 if [[ -z "${SERVICE_NAME}" ]]; then
-    echo "SERVICE_NAME was not set. Aborting" | indent
+    echo "SERVICE_NAME was not set. Aborting"
     exit 1
 fi
 
