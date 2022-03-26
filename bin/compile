@@ -461,16 +461,12 @@ setupProcfile() {
     fi
     info ""
     info "Created a Procfile with the following entries:"
-    if [ ${#pf[@]} -eq 1 ]; then
-        local line="web: bin/$(echo ${SERVICE_NAME} | cut -d / -f 2)"
-        echo "${line}" > ${build}/Procfile
-        info "\t\t${line}"
-    elif [ ${#pf[@]} -gt 1 ]; then
-        for pfl in "${pf[@]}"; do
-            echo "${pfl}" >> ${build}/Procfile
-            info "\t\t${pfl}"
-        done
-    fi
+
+    # create one server with the package name matching SERVICE_NAME
+    local line="web: bin/$(echo ${SERVICE_NAME} | cut -d / -f 2)"
+    echo "${line}" > ${build}/Procfile
+    info "\t\t${line}"
+
     info ""
     info "If these entries look incomplete or incorrect please create a Procfile with the required entries."
     info "See https://devcenter.heroku.com/articles/procfile for more details about Procfiles"
