@@ -1,10 +1,17 @@
 #!/bin/bash
 # usage: bin/compile <build-dir> <cache-dir> <env-dir>
 
+indent() {
+    sed -u 's/^/       /'
+}
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
 SERVICE_NAME=$(cat "${ENV_DIR}/SERVICE_NAME")
 
 if [[ -z "${SERVICE_NAME}" ]]; then
-    echo "SERVICE_NAME was not set. Aborting"
+    echo "SERVICE_NAME was not set. Aborting" | indent
     exit 1
 fi
 
