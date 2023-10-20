@@ -2,6 +2,113 @@
 
 ## Unreleased
 
+## v181 (2023-10-11)
+* Add go1.20.9
+* Add go1.20.10
+* Add go1.21.2
+* Add go1.21.3
+* go1.20 defaults to go1.20.10
+* go1.21 defaults to go1.21.3
+
+## v180 (2023-09-18)
+* Add go1.19.13
+* Add go1.20.8
+* go1.19 defaults to go1.19.13
+* go1.20 defaults to go1.20.8
+
+## v179 (2023-09-18)
+* Add go1.21.1
+* go1.21 defaults to go1.21.1
+
+## v178 (2023-08-14)
+* Add go1.21.0
+* Use go1.21.0 for go1.21
+
+## v177 (2023-08-07)
+* Add go1.20.7
+* Add go1.19.12
+* go1.20 defaults to go1.20.7
+* go1.19 defaults to go1.19.12
+
+## v176 (2023-08-01)
+* Add go1.20.6
+* Add go1.19.11
+* go1.20 defaults to go1.20.6
+* go1.19 defaults to go1.19.11
+
+## v175 (2023-06-26)
+* Add go1.20.5
+* Add go1.19.10
+* go1.20 defaults to go1.20.5
+* go1.19 defaults to go1.19.10
+* Drop support for the heroku-18 stack
+
+## v174 (2023-05-09)
+* Add go1.20.4
+* Add go1.19.9
+* go1.20 defaults to go1.20.4
+* go1.19 defaults to go1.19.9
+
+### v173 (2023-04-11)
+* Add go1.20.3
+* Add go1.19.8
+* go1.20 defaults to go1.20.3
+* go1.19 defaults to go1.19.8
+
+### v172 (2023-03-23)
+* Add go1.20.1 and go1.20.2
+* Add go1.19.6 and go1.19.7
+* go1.20 defaults to 1.20.2
+* go1.19 defaults to 1.19.7
+
+### v171 (2023-02-06)
+* Add go1.20, use for go1.20 and go1.20.0
+
+### v170 (2023-01-23)
+* Add go1.19.4, go1.19.5
+* Add go1.18.9, go1.18.10
+* go1.19 defaults to go1.19.5
+* go1.18 defaults to go1.18.10
+
+## v169 (2022-11-09)
+* Add go1.19.2, and go1.19.3
+* Add go1.18.4, go1.18.5, go1.18.7, and go1.18.8
+* Add go1.17.11, go1.17.12, and go1.17.13
+* go1.19 defaults to go1.19.3
+* go1.18 defaults to go1.18.8
+* go1.17 defaults to go1.17.13
+
+## v168 (2022-09-08)
+* Add go1.19
+* Add go1.19.1
+* Add go1.18.6
+* go1.18 defaults to 1.18.6
+* go1.19 defaults to 1.19.1
+
+## v166 (2022-06-15)
+* Re-release of the changes in v164.
+
+## v165 (2022-06-14)
+* Temporary rollback of the v164 release.
+
+## v164 (2022-06-14)
+* Adjust curl retry and connection timeout handling
+* Switch to the recommended regional S3 domain instead of the global one
+
+## v163 (2022-06-09), v167 (published by mistake 2022-09-08)
+* Use the go version in `go.mod` if no `+heroku` comment is found (#378/#411)
+* Add go1.18.3
+* go1.18 defaults to 1.18.3
+
+## v162 (2022-03-23)
+* Add go1.17.9
+* Add go1.17.10
+* Add go1.18.1
+* Add go1.18.2
+* go1.17 defaults to 1.17.10
+* go1.18 defaults to 1.18.2
+* Add Heroku-22 to the Circle CI test matrix.
+
 ## v161 (2022-03-15)
 * Add go1.15.11
 * Add go1.15.12
